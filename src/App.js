@@ -5,6 +5,9 @@ import msgIcon from './assets/assets/message.svg';
 import home from './assets/assets/home.svg';
 import saved from './assets/assets/bookmark.svg';
 import rocket from './assets/assets/rocket.svg';
+import sendBtn from './assets/assets/send.svg';
+import userIcon from './assets/assets/user-icon.png';
+import gptImgLogo from './assets/assets/chatgptLogo.svg';
 
 function App() {
   return (
@@ -29,7 +32,20 @@ function App() {
          </div>
       </div>
       <div className='main'>
-
+           <div className='chats'>
+             <div className='chat'>
+              <img src={userIcon} alt=''/><p className='text'>Profiler </p>
+             </div>
+             <div className='chat'>
+              <img src={gptImgLogo} alt=''/><p className='text'>lorem </p>
+             </div>
+           </div>
+           <div className='chatFooter'>
+               <div className='inp'>
+                    <input type='text' placeholder='Send a message' name='' id=''/><button className='send'><img src={sendBtn} alt='send' /></button>
+               </div>
+               <p>Chat Bot may produce inaccurate information about people, places, or facts.  Chat Bot Feb 25 version.</p>
+           </div>
       </div>
     </div>
   );
